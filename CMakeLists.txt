@@ -3,4 +3,7 @@ project(Panorama)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Panorama main.cpp)
+add_executable(Panorama main.cpp panorama_check.cpp panorama_check.h)
+find_package(OpenCV REQUIRED)
+
+target_link_libraries(Panorama ${OpenCV_LIBS})

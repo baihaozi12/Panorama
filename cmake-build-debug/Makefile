@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+panorama_check.o: panorama_check.cpp.o
+
+.PHONY : panorama_check.o
+
+# target to build an object file
+panorama_check.cpp.o:
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/panorama_check.cpp.o
+.PHONY : panorama_check.cpp.o
+
+panorama_check.i: panorama_check.cpp.i
+
+.PHONY : panorama_check.i
+
+# target to preprocess a source file
+panorama_check.cpp.i:
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/panorama_check.cpp.i
+.PHONY : panorama_check.cpp.i
+
+panorama_check.s: panorama_check.cpp.s
+
+.PHONY : panorama_check.s
+
+# target to generate assembly for a file
+panorama_check.cpp.s:
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/panorama_check.cpp.s
+.PHONY : panorama_check.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... panorama_check.o"
+	@echo "... panorama_check.i"
+	@echo "... panorama_check.s"
 .PHONY : help
 
 

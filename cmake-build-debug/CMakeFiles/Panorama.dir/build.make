@@ -81,17 +81,93 @@ CMakeFiles/Panorama.dir/main.cpp.o.provides: CMakeFiles/Panorama.dir/main.cpp.o.
 CMakeFiles/Panorama.dir/main.cpp.o.provides.build: CMakeFiles/Panorama.dir/main.cpp.o
 
 
+CMakeFiles/Panorama.dir/panorama_check.cpp.o: CMakeFiles/Panorama.dir/flags.make
+CMakeFiles/Panorama.dir/panorama_check.cpp.o: ../panorama_check.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Hao Bai/workspace/Panorama/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Panorama.dir/panorama_check.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Panorama.dir/panorama_check.cpp.o -c "/mnt/c/Users/Hao Bai/workspace/Panorama/panorama_check.cpp"
+
+CMakeFiles/Panorama.dir/panorama_check.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Panorama.dir/panorama_check.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Hao Bai/workspace/Panorama/panorama_check.cpp" > CMakeFiles/Panorama.dir/panorama_check.cpp.i
+
+CMakeFiles/Panorama.dir/panorama_check.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Panorama.dir/panorama_check.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Hao Bai/workspace/Panorama/panorama_check.cpp" -o CMakeFiles/Panorama.dir/panorama_check.cpp.s
+
+CMakeFiles/Panorama.dir/panorama_check.cpp.o.requires:
+
+.PHONY : CMakeFiles/Panorama.dir/panorama_check.cpp.o.requires
+
+CMakeFiles/Panorama.dir/panorama_check.cpp.o.provides: CMakeFiles/Panorama.dir/panorama_check.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/panorama_check.cpp.o.provides.build
+.PHONY : CMakeFiles/Panorama.dir/panorama_check.cpp.o.provides
+
+CMakeFiles/Panorama.dir/panorama_check.cpp.o.provides.build: CMakeFiles/Panorama.dir/panorama_check.cpp.o
+
+
 # Object files for target Panorama
 Panorama_OBJECTS = \
-"CMakeFiles/Panorama.dir/main.cpp.o"
+"CMakeFiles/Panorama.dir/main.cpp.o" \
+"CMakeFiles/Panorama.dir/panorama_check.cpp.o"
 
 # External object files for target Panorama
 Panorama_EXTERNAL_OBJECTS =
 
 Panorama: CMakeFiles/Panorama.dir/main.cpp.o
+Panorama: CMakeFiles/Panorama.dir/panorama_check.cpp.o
 Panorama: CMakeFiles/Panorama.dir/build.make
+Panorama: /usr/local/lib/libopencv_gapi.so.4.3.0
+Panorama: /usr/local/lib/libopencv_stitching.so.4.3.0
+Panorama: /usr/local/lib/libopencv_aruco.so.4.3.0
+Panorama: /usr/local/lib/libopencv_bgsegm.so.4.3.0
+Panorama: /usr/local/lib/libopencv_bioinspired.so.4.3.0
+Panorama: /usr/local/lib/libopencv_ccalib.so.4.3.0
+Panorama: /usr/local/lib/libopencv_dnn_objdetect.so.4.3.0
+Panorama: /usr/local/lib/libopencv_dnn_superres.so.4.3.0
+Panorama: /usr/local/lib/libopencv_dpm.so.4.3.0
+Panorama: /usr/local/lib/libopencv_face.so.4.3.0
+Panorama: /usr/local/lib/libopencv_freetype.so.4.3.0
+Panorama: /usr/local/lib/libopencv_fuzzy.so.4.3.0
+Panorama: /usr/local/lib/libopencv_hfs.so.4.3.0
+Panorama: /usr/local/lib/libopencv_img_hash.so.4.3.0
+Panorama: /usr/local/lib/libopencv_intensity_transform.so.4.3.0
+Panorama: /usr/local/lib/libopencv_line_descriptor.so.4.3.0
+Panorama: /usr/local/lib/libopencv_quality.so.4.3.0
+Panorama: /usr/local/lib/libopencv_rapid.so.4.3.0
+Panorama: /usr/local/lib/libopencv_reg.so.4.3.0
+Panorama: /usr/local/lib/libopencv_rgbd.so.4.3.0
+Panorama: /usr/local/lib/libopencv_saliency.so.4.3.0
+Panorama: /usr/local/lib/libopencv_stereo.so.4.3.0
+Panorama: /usr/local/lib/libopencv_structured_light.so.4.3.0
+Panorama: /usr/local/lib/libopencv_superres.so.4.3.0
+Panorama: /usr/local/lib/libopencv_surface_matching.so.4.3.0
+Panorama: /usr/local/lib/libopencv_tracking.so.4.3.0
+Panorama: /usr/local/lib/libopencv_videostab.so.4.3.0
+Panorama: /usr/local/lib/libopencv_xfeatures2d.so.4.3.0
+Panorama: /usr/local/lib/libopencv_xobjdetect.so.4.3.0
+Panorama: /usr/local/lib/libopencv_xphoto.so.4.3.0
+Panorama: /usr/local/lib/libopencv_shape.so.4.3.0
+Panorama: /usr/local/lib/libopencv_highgui.so.4.3.0
+Panorama: /usr/local/lib/libopencv_datasets.so.4.3.0
+Panorama: /usr/local/lib/libopencv_plot.so.4.3.0
+Panorama: /usr/local/lib/libopencv_text.so.4.3.0
+Panorama: /usr/local/lib/libopencv_dnn.so.4.3.0
+Panorama: /usr/local/lib/libopencv_ml.so.4.3.0
+Panorama: /usr/local/lib/libopencv_phase_unwrapping.so.4.3.0
+Panorama: /usr/local/lib/libopencv_optflow.so.4.3.0
+Panorama: /usr/local/lib/libopencv_ximgproc.so.4.3.0
+Panorama: /usr/local/lib/libopencv_video.so.4.3.0
+Panorama: /usr/local/lib/libopencv_videoio.so.4.3.0
+Panorama: /usr/local/lib/libopencv_imgcodecs.so.4.3.0
+Panorama: /usr/local/lib/libopencv_objdetect.so.4.3.0
+Panorama: /usr/local/lib/libopencv_calib3d.so.4.3.0
+Panorama: /usr/local/lib/libopencv_features2d.so.4.3.0
+Panorama: /usr/local/lib/libopencv_flann.so.4.3.0
+Panorama: /usr/local/lib/libopencv_photo.so.4.3.0
+Panorama: /usr/local/lib/libopencv_imgproc.so.4.3.0
+Panorama: /usr/local/lib/libopencv_core.so.4.3.0
 Panorama: CMakeFiles/Panorama.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Hao Bai/workspace/Panorama/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Panorama"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Hao Bai/workspace/Panorama/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Panorama"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Panorama.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +176,7 @@ CMakeFiles/Panorama.dir/build: Panorama
 .PHONY : CMakeFiles/Panorama.dir/build
 
 CMakeFiles/Panorama.dir/requires: CMakeFiles/Panorama.dir/main.cpp.o.requires
+CMakeFiles/Panorama.dir/requires: CMakeFiles/Panorama.dir/panorama_check.cpp.o.requires
 
 .PHONY : CMakeFiles/Panorama.dir/requires
 
