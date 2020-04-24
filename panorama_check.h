@@ -1,0 +1,8 @@
+//
+// Created by Hao Bai on 2020/4/24.
+//
+
+#ifndef PANORAMA_PANORAMA_CHECK_H
+#define PANORAMA_PANORAMA_CHECK_H
+
+#endif //PANORAMA_PANORAMA_CHECK_H
