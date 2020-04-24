@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Panorama.dir/main.cpp.o  -o Panorama 
