@@ -41,6 +41,45 @@ struct result_return{
 
 };
 
+struct store_each{
+    double work_megapix = 0.6;
+    double seam_megapix = 0.1;
+    double compose_megapix = -1;
+    float conf_thresh = 1.f;
+    float match_conf = 0.3f;
+    float blend_strength = 5;
+    double work_scale = 1;
+    double seam_scale = 1;
+    double compose_scale = 1;
+    double seam_work_aspect = 1;
+    bool is_work_scale_set = false;
+    bool is_seam_scale_set = false;
+    bool is_compose_scale_set = false;
+    Ptr<Feature2D> finder =  cv::xfeatures2d::SiftFeatureDetector::create();
+    vector<Mat> full_imgs;
+    vector<string> img_names;
+    vector<Size> full_img_sizes;
+    vector<Mat> resized_imgs;
+    ImageFeatures temp_feature;
+    vector<ImageFeatures> features;
+    vector<MatchesInfo> pairwise_matches;
+    Ptr<FeaturesMatcher>  matcher = makePtr<BestOf2NearestMatcher>(false, match_conf);
+    Ptr<Estimator> estimator = makePtr<HomographyBasedEstimator>();
+    vector<CameraParams> cameras;
+    Ptr<detail::BundleAdjusterBase> adjuster = makePtr<detail::BundleAdjusterRay>();
+    Mat_<uchar> refine_mask = Mat::zeros(3, 3, CV_8U);
+
+    vector<double> focals;
+    float warped_image_scale;
+    Ptr<WarperCreator> warper_creator = makePtr<cv::PlaneWarper>();
+    //! 计算曝光度，调整图像曝光，减少亮度差异
+    Ptr<ExposureCompensator> compensator = ExposureCompensator::createDefault(ExposureCompensator::GAIN_BLOCKS);
+    // 找接缝
+    Ptr<SeamFinder> seam_finder = makePtr<detail::GraphCutSeamFinder>(GraphCutSeamFinderBase::COST_COLOR);
+    double compose_work_aspect = 1;
+};
+
+
 int get_combined_feature(featuredata_pano &result, Mat full_img, int img_idx);
 
 void f2_matcher(vector<ImageFeatures> &features, vector<MatchesInfo> &f2_matches);
@@ -49,3 +88,6 @@ int match_features(vector<featuredata_pano> feature_data_list, vector<MatchesInf
 
 int estimate_homo(vector<featuredata_pano> featuredata_pano_list, vector<ImageFeatures> features, vector<MatchesInfo> pairwise_matches, vector<Mat> full_imgs, int step, Mat &result_img);
 
+void i_matcher(vector<ImageFeatures> &features, vector<MatchesInfo> &pairwise_matches);
+
+store_each generate_result(store_each all_param, int index);
