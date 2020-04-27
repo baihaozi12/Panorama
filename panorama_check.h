@@ -57,7 +57,7 @@ struct store_each{
     bool is_compose_scale_set = false;
     Ptr<Feature2D> finder =  cv::xfeatures2d::SiftFeatureDetector::create();
     vector<Mat> full_imgs;
-    vector<string> img_names;
+//    vector<string> img_names;
     vector<Size> full_img_sizes;
     vector<Mat> resized_imgs;
     ImageFeatures temp_feature;
@@ -77,6 +77,9 @@ struct store_each{
     // 找接缝
     Ptr<SeamFinder> seam_finder = makePtr<detail::GraphCutSeamFinder>(GraphCutSeamFinderBase::COST_COLOR);
     double compose_work_aspect = 1;
+
+    Mat result_stitched_img;
+    Mat result_stitched_img_mask;
 };
 
 

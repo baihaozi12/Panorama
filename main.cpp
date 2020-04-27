@@ -30,28 +30,15 @@ int main()
 //    full_imgs.push_back(pre_frame);
     vector<string> image_names_temp;
     store_each all_param;
-    all_param.img_names.push_back(img_names[0]);
-
+//    all_param.img_names.push_back(img_names[0]);
+    all_param.full_imgs.push_back(pre_frame);
     all_param = generate_result(all_param, 0);
     for (int i = 1; i < num_images; ++i)
     {
-        all_param.img_names.push_back(img_names[i]);
+        Mat pre_frame = imread(img_names[i]);
+        all_param.full_imgs.push_back(pre_frame);
+
         all_param = generate_result(all_param, i);
-//        Mat curr_frame = imread(img_names[i]);
-//        full_imgs.push_back(curr_frame);
-//        // get features
-//        get_combined_feature(feature_pano,curr_frame, i);
-//        feature_data_list.push_back(feature_pano);
-//        features.push_back(feature_pano.features);
-//        // match
-//        match_features(feature_data_list, pairwise_matches);
-//        //
-//
-//        estimate_homo(feature_data_list, features, pairwise_matches, full_imgs,  i, result_img);
-//        pairwise_matches.clear();
-
-
-//        curr_frame.copyTo(pre_frame);
     }
 
     return 1;

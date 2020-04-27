@@ -364,7 +364,7 @@ store_each generate_result(store_each all_param, int index){
     all_param.is_compose_scale_set = false;
 
 
-    all_param.full_imgs.push_back(imread(all_param.img_names[index]));
+//    all_param.full_imgs.push_back(imread(all_param.img_names[index]));
 
     all_param.full_img_sizes.push_back(all_param.full_imgs[index].size()) ;
 
@@ -405,27 +405,27 @@ store_each generate_result(store_each all_param, int index){
     vector<int> indices = leaveBiggestComponent(all_param.features, all_param.pairwise_matches, all_param.conf_thresh);
 
     vector<Mat> img_subset;
-    vector<String> img_names_subset;
+//    vector<String> img_names_subset;
     vector<Size> full_img_sizes_subset;
     for (size_t i = 0; i < indices.size(); ++i)
     {
         cout<< "indices '"<< indices[i] <<"'\n";
-        img_names_subset.push_back(all_param.img_names[indices[i]]);
+//        img_names_subset.push_back(all_param.img_names[indices[i]]);
         img_subset.push_back(all_param.resized_imgs[indices[i]]);
         full_img_sizes_subset.push_back(all_param.full_img_sizes[indices[i]]);
     }
 
-    all_param.img_names = img_names_subset;
+//    all_param.img_names = img_names_subset;
     all_param.resized_imgs = img_subset;
     all_param.full_img_sizes = full_img_sizes_subset;
 
     // 及时清内存
-    img_names_subset.clear();
+//    img_names_subset.clear();
     img_subset.clear();
     full_img_sizes_subset.clear();
 
     // Check if we still have enough images
-    int num_images = static_cast<int>(all_param.img_names.size());
+    int num_images = static_cast<int>(all_param.full_imgs.size());
     if (num_images < 2)
     {
         // 及时报错
@@ -644,7 +644,8 @@ store_each generate_result(store_each all_param, int index){
     imwrite("/home/baihao/Stitch/try_new/result.jpg", result);
     imwrite("/home/baihao/Stitch/try_new/result_mask.jpg", result_mask);
 
-
+    all_param.result_stitched_img = result;
+    all_param.result_stitched_img_mask = result_mask;
 
     // 清内存
     result.release();
