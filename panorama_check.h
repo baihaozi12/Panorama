@@ -71,7 +71,9 @@ struct store_each{
 
     vector<double> focals;
     float warped_image_scale;
-    Ptr<WarperCreator> warper_creator = makePtr<cv::PlaneWarper>();
+//    Ptr<WarperCreator> warper_creator = makePtr<cv::PlaneWarper>();
+    Ptr<WarperCreator> warper_creator = makePtr<cv::CylindricalWarper>();
+//    Ptr<WarperCreator> warper_creator = makePtr<cv::FisheyeWarper>();
     //! 计算曝光度，调整图像曝光，减少亮度差异
     Ptr<ExposureCompensator> compensator = ExposureCompensator::createDefault(ExposureCompensator::GAIN_BLOCKS);
     // 找接缝

@@ -630,10 +630,10 @@ store_each generate_result(store_each all_param, int index){
             }
             blender->prepare(corners, sizes);
         }
-        string output_path = "/home/baihao/Stitch/try_new/resultaaaaa"+to_string(img_idx) +".jpeg";
-        imwrite(output_path, img_warped_s);
-        output_path = "/home/baihao/Stitch/try_new/resultbbbbb"+to_string(img_idx) +".jpeg";
-        imwrite(output_path, mask_warped);
+//        string output_path = "/home/baihao/Stitch/try_new/resultaaaaa"+to_string(img_idx) +".jpeg";
+//        imwrite(output_path, img_warped_s);
+//        output_path = "/home/baihao/Stitch/try_new/resultbbbbb"+to_string(img_idx) +".jpeg";
+//        imwrite(output_path, mask_warped);
         blender->feed(img_warped_s, mask_warped, corners[img_idx]);
     }
     /* ===========================================================================*/
@@ -642,10 +642,10 @@ store_each generate_result(store_each all_param, int index){
     Mat result, result_mask;
     blender->blend(result, result_mask);
     imwrite("/home/baihao/Stitch/try_new/result.jpg", result);
-    imwrite("/home/baihao/Stitch/try_new/result_mask.jpg", result_mask);
+//    imwrite("/home/baihao/Stitch/try_new/result_mask.jpg", result_mask);
 
     all_param.result_stitched_img = result;
-    all_param.result_stitched_img_mask = result_mask;
+    all_param.result_stitched_img_mask = result;
 
     // 清内存
     result.release();

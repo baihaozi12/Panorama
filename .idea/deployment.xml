@@ -16,6 +16,16 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="树莓派 (8738d637-3745-4886-a234-2153886bbba2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.6DIoVaf0ta" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
     </serverData>
   </component>
 </project>
