@@ -1,4 +1,4 @@
-# lenZ Panorama Mobile (Frankenstein)
+# lenZ Panorama Mobile 
 
 ---
 # Aim
