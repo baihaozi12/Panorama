@@ -399,6 +399,11 @@ store_each generate_result(store_each all_param, int index){
     vector<MatchesInfo> new_match;
     all_param.pairwise_matches = new_match;
     new_match.clear();
+
+//    Ptr<FeaturesMatcher>  matcher = makePtr<BestOf2NearestMatcher>(false, all_param.match_conf);
+//    (*matcher)(all_param.features, all_param.pairwise_matches);
+//    matcher->collectGarbage();
+
     i_matcher(all_param.features, all_param.pairwise_matches);
     //! (4) 剔除外点，保留最确信的大成分
     // Leave only images we are sure are from the same panorama
@@ -641,7 +646,7 @@ store_each generate_result(store_each all_param, int index){
     std::cout << "\nBlending ...\n";
     Mat result, result_mask;
     blender->blend(result, result_mask);
-    imwrite("/home/baihao/Stitch/try_new/result.jpg", result);
+//    imwrite("/home/nolan/Images/result.jpg", result);
 //    imwrite("/home/baihao/Stitch/try_new/result_mask.jpg", result_mask);
 
     all_param.result_stitched_img = result;
