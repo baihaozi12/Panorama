@@ -627,6 +627,8 @@ store_each generate_result(store_each all_param, int index){
 
             if (!blender)
             {
+                // 朋友使这个贼快，留着括号上面那个blender->prepare(corners, sizes)，剩下的都注释咯
+//                blender = Blender::createDefault(Blender::NO, false);
                 blender = Blender::createDefault(Blender::MULTI_BAND, false);
                 Size dst_sz = resultRoi(corners, sizes).size();
                 float blend_width = sqrt(static_cast<float>(dst_sz.area())) * all_param.blend_strength / 100.f;

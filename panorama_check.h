@@ -80,7 +80,7 @@ struct store_each{
     // 找接缝 图切割法
     Ptr<SeamFinder> seam_finder = makePtr<detail::GraphCutSeamFinder>(GraphCutSeamFinderBase::COST_COLOR);
     // 不找了 朋友, 快一点
-//    Ptr<SeamFinder> seam_finder = makePtr<detail::GraphCutSeamFinder>(NoSeamFinder::NO);
+//    Ptr<SeamFinder> seam_finder = makePtr<detail::NoSeamFinder>();
     double compose_work_aspect = 1;
 
     Mat result_stitched_img;
