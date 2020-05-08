@@ -20,7 +20,8 @@
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/stitching/detail/autocalib.hpp"
-
+//#include <>
+//#include <boost/thread.hpp>
 #ifndef PANORAMA_PANORAMA_CHECK_H
 #define PANORAMA_PANORAMA_CHECK_H
 
@@ -76,12 +77,16 @@ struct store_each{
 //    Ptr<WarperCreator> warper_creator = makePtr<cv::FisheyeWarper>();
     //! 计算曝光度，调整图像曝光，减少亮度差异
     Ptr<ExposureCompensator> compensator = ExposureCompensator::createDefault(ExposureCompensator::GAIN_BLOCKS);
-    // 找接缝
+    // 找接缝 图切割法
     Ptr<SeamFinder> seam_finder = makePtr<detail::GraphCutSeamFinder>(GraphCutSeamFinderBase::COST_COLOR);
+    // 不找了 朋友, 快一点
+//    Ptr<SeamFinder> seam_finder = makePtr<detail::GraphCutSeamFinder>(NoSeamFinder::NO);
     double compose_work_aspect = 1;
 
     Mat result_stitched_img;
     Mat result_stitched_img_mask;
+
+    int status;
 };
 
 

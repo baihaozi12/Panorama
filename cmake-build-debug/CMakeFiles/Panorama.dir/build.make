@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/nolan/Desktop/Code/Panorama
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug
+CMAKE_BINARY_DIR = "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Panorama.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Panorama.dir/flags.make
 
 CMakeFiles/Panorama.dir/main.cpp.o: CMakeFiles/Panorama.dir/flags.make
 CMakeFiles/Panorama.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Panorama.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Panorama.dir/main.cpp.o -c /mnt/c/Users/nolan/Desktop/Code/Panorama/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Panorama.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Panorama.dir/main.cpp.o -c "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/main.cpp"
 
 CMakeFiles/Panorama.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Panorama.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/nolan/Desktop/Code/Panorama/main.cpp > CMakeFiles/Panorama.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/main.cpp" > CMakeFiles/Panorama.dir/main.cpp.i
 
 CMakeFiles/Panorama.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Panorama.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/nolan/Desktop/Code/Panorama/main.cpp -o CMakeFiles/Panorama.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/main.cpp" -o CMakeFiles/Panorama.dir/main.cpp.s
 
 CMakeFiles/Panorama.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Panorama.dir/main.cpp.o.provides.build: CMakeFiles/Panorama.dir/main.
 
 CMakeFiles/Panorama.dir/panorama_check.cpp.o: CMakeFiles/Panorama.dir/flags.make
 CMakeFiles/Panorama.dir/panorama_check.cpp.o: ../panorama_check.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Panorama.dir/panorama_check.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Panorama.dir/panorama_check.cpp.o -c /mnt/c/Users/nolan/Desktop/Code/Panorama/panorama_check.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Panorama.dir/panorama_check.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Panorama.dir/panorama_check.cpp.o -c "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/panorama_check.cpp"
 
 CMakeFiles/Panorama.dir/panorama_check.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Panorama.dir/panorama_check.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/nolan/Desktop/Code/Panorama/panorama_check.cpp > CMakeFiles/Panorama.dir/panorama_check.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/panorama_check.cpp" > CMakeFiles/Panorama.dir/panorama_check.cpp.i
 
 CMakeFiles/Panorama.dir/panorama_check.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Panorama.dir/panorama_check.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/nolan/Desktop/Code/Panorama/panorama_check.cpp -o CMakeFiles/Panorama.dir/panorama_check.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/panorama_check.cpp" -o CMakeFiles/Panorama.dir/panorama_check.cpp.s
 
 CMakeFiles/Panorama.dir/panorama_check.cpp.o.requires:
 
@@ -116,6 +116,7 @@ Panorama_EXTERNAL_OBJECTS =
 Panorama: CMakeFiles/Panorama.dir/main.cpp.o
 Panorama: CMakeFiles/Panorama.dir/panorama_check.cpp.o
 Panorama: CMakeFiles/Panorama.dir/build.make
+Panorama: /usr/local/lib/libopencv_gapi.so.4.3.0
 Panorama: /usr/local/lib/libopencv_stitching.so.4.3.0
 Panorama: /usr/local/lib/libopencv_aruco.so.4.3.0
 Panorama: /usr/local/lib/libopencv_bgsegm.so.4.3.0
@@ -166,7 +167,7 @@ Panorama: /usr/local/lib/libopencv_photo.so.4.3.0
 Panorama: /usr/local/lib/libopencv_imgproc.so.4.3.0
 Panorama: /usr/local/lib/libopencv_core.so.4.3.0
 Panorama: CMakeFiles/Panorama.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Panorama"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Panorama"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Panorama.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -184,6 +185,6 @@ CMakeFiles/Panorama.dir/clean:
 .PHONY : CMakeFiles/Panorama.dir/clean
 
 CMakeFiles/Panorama.dir/depend:
-	cd /mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/nolan/Desktop/Code/Panorama /mnt/c/Users/nolan/Desktop/Code/Panorama /mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug /mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug /mnt/c/Users/nolan/Desktop/Code/Panorama/cmake-build-debug/CMakeFiles/Panorama.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug/CMakeFiles/Panorama.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Panorama.dir/depend
 
