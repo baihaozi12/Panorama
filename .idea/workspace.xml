@@ -31,9 +31,7 @@
   <component name="ChangeListManager">
     <list default="true" id="23114e11-c09f-4185-b21c-74922fe90fbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panorama_check.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/panorama_check.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panorama_jni.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/panorama_jni.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panorama_jni.h" beforeDir="false" afterPath="$PROJECT_DIR$/panorama_jni.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <workItem from="1588230067402" duration="2660000" />
       <workItem from="1588732938708" duration="5664000" />
       <workItem from="1588820694544" duration="597000" />
-      <workItem from="1588933716995" duration="15185000" />
+      <workItem from="1588933716995" duration="15826000" />
     </task>
     <task id="LOCAL-00001" summary="接缝提提速">
       <created>1588934217360</created>
