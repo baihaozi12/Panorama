@@ -29,9 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23114e11-c09f-4185-b21c-74922fe90fbc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="23114e11-c09f-4185-b21c-74922fe90fbc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +98,7 @@
       <workItem from="1588230067402" duration="2660000" />
       <workItem from="1588732938708" duration="5664000" />
       <workItem from="1588820694544" duration="597000" />
-      <workItem from="1588933716995" duration="5563000" />
+      <workItem from="1588933716995" duration="5908000" />
     </task>
     <task id="LOCAL-00001" summary="接缝提提速">
       <created>1588934217360</created>
@@ -116,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588937107261</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="写个jni">
+      <created>1588996106610</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588996106610</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +141,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="接缝提提速" />
     <MESSAGE value="把所有提速的注释，现在是效果最好的" />
-    <option name="LAST_COMMIT_MESSAGE" value="把所有提速的注释，现在是效果最好的" />
+    <MESSAGE value="写个jni" />
+    <option name="LAST_COMMIT_MESSAGE" value="写个jni" />
   </component>
   <component name="WindowStateProjectService">
     <state x="498" y="112" key="#SSH_Configurations" timestamp="1588229874574">
@@ -147,10 +153,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="475" y="201" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588230123086" />
-    <state x="420" y="31" key="CommitChangelistDialog2" timestamp="1588937105334">
+    <state x="420" y="31" key="CommitChangelistDialog2" timestamp="1588996104919">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="420" y="31" key="CommitChangelistDialog2/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588937105334" />
+    <state x="420" y="31" key="CommitChangelistDialog2/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588996104919" />
     <state width="640" height="548" key="DebuggerActiveHint" timestamp="1587896435538">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -159,26 +165,26 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="752" y="251" key="FileChooserDialogImpl/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588745178398" />
-    <state width="1995" height="334" key="GridCell.Tab.0.bottom" timestamp="1588937064332">
+    <state width="1995" height="334" key="GridCell.Tab.0.bottom" timestamp="1588996081341">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1589" height="256" key="GridCell.Tab.0.bottom/0.0.1217.720/1920.0.1632.960@1920.0.1632.960" timestamp="1588142851179" />
-    <state width="1995" height="334" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588937064332" />
-    <state width="1995" height="334" key="GridCell.Tab.0.center" timestamp="1588937064332">
+    <state width="1995" height="334" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588996081341" />
+    <state width="1995" height="334" key="GridCell.Tab.0.center" timestamp="1588996081341">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1589" height="256" key="GridCell.Tab.0.center/0.0.1217.720/1920.0.1632.960@1920.0.1632.960" timestamp="1588142851179" />
-    <state width="1995" height="334" key="GridCell.Tab.0.center/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588937064332" />
-    <state width="1995" height="334" key="GridCell.Tab.0.left" timestamp="1588937064332">
+    <state width="1995" height="334" key="GridCell.Tab.0.center/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588996081341" />
+    <state width="1995" height="334" key="GridCell.Tab.0.left" timestamp="1588996081341">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1589" height="256" key="GridCell.Tab.0.left/0.0.1217.720/1920.0.1632.960@1920.0.1632.960" timestamp="1588142851179" />
-    <state width="1995" height="334" key="GridCell.Tab.0.left/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588937064332" />
-    <state width="1995" height="334" key="GridCell.Tab.0.right" timestamp="1588937064332">
+    <state width="1995" height="334" key="GridCell.Tab.0.left/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588996081341" />
+    <state width="1995" height="334" key="GridCell.Tab.0.right" timestamp="1588996081341">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1589" height="256" key="GridCell.Tab.0.right/0.0.1217.720/1920.0.1632.960@1920.0.1632.960" timestamp="1588142851179" />
-    <state width="1995" height="334" key="GridCell.Tab.0.right/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588937064332" />
+    <state width="1995" height="334" key="GridCell.Tab.0.right/0.0.2048.1112/2560.154.1920.1040@0.0.2048.1112" timestamp="1588996081341" />
     <state width="1995" height="309" key="GridCell.Tab.1.bottom" timestamp="1588230052643">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
