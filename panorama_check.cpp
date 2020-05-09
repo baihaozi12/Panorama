@@ -653,7 +653,7 @@ store_each generate_result(store_each all_param, int index){
         std::cout << "\nBlending ...\n";
         Mat result, result_mask;
         blender->blend(result, result_mask);
-        imwrite("/home/baihao/Stitch/try_new/resultabc.jpg", result);
+//        imwrite("/home/baihao/Stitch/try_new/resultabc.jpg", result);
     //    imwrite("/home/baihao/Stitch/try_new/result_mask.jpg", result_mask);
 
         all_param.result_stitched_img = result;
@@ -676,6 +676,7 @@ store_each generate_result(store_each all_param, int index){
         masks_warped.clear();
         sizes.clear();
         focals.clear();
+//        all_param.
     } catch (Exception e1) {
         all_param.status = 1;
     }
