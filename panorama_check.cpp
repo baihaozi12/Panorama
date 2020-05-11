@@ -5,6 +5,7 @@
 #include "panorama_check.h"
 
 
+
 //double work_scale = 1;
 //double seam_scale = 1;
 //double compose_scale = 1;
@@ -380,7 +381,7 @@ store_each generate_result(store_each all_param, int index){
         }
 
         Mat resized_img;
-        resize(all_param.full_imgs[index],resized_img , Size(), all_param.work_scale, all_param.work_scale, INTER_LINEAR_EXACT);
+        resize(all_param.full_imgs[index],resized_img , Size(), all_param.work_scale, all_param.work_scale);
 
         if (!all_param.is_seam_scale_set)
         {
@@ -388,12 +389,17 @@ store_each generate_result(store_each all_param, int index){
             all_param.seam_work_aspect = all_param.seam_scale / all_param.work_scale;
             all_param.is_seam_scale_set = true;
         }
+        Ptr<FeaturesFinder> finder;
+        finder = new SurfFeaturesFinder();
+//        Ptr<Feature2D> finder =  cv::xfeatures2d::SiftFeatureDetector::create();
 
-        computeImageFeatures(all_param.finder, resized_img, all_param.temp_feature);
+        (*finder)(resized_img, all_param.temp_feature);
+        finder->collectGarbage();
+//        computeImageFeatures(all_param.finder, resized_img, all_param.temp_feature);
         all_param.temp_feature.img_idx = index;
         all_param.features.push_back(all_param.temp_feature);
         // 拼接缝比例尺seam_scale
-        resize(all_param.full_imgs[index], resized_img, Size(), all_param.seam_scale, all_param.seam_scale, INTER_LINEAR_EXACT);
+        resize(all_param.full_imgs[index], resized_img, Size(), all_param.seam_scale, all_param.seam_scale);
         all_param.resized_imgs.push_back(resized_img);
         resized_img.release();
 
@@ -530,14 +536,14 @@ store_each generate_result(store_each all_param, int index){
 
         std::cout << "Compensating exposure... \n";
         //! 计算曝光度，调整图像曝光，减少亮度差异
-        if (dynamic_cast<BlocksCompensator*>(all_param.compensator.get()))
-        {
-            BlocksCompensator* bcompensator = dynamic_cast<BlocksCompensator*>(all_param.compensator.get());
-            bcompensator->setNrFeeds(1);
-            bcompensator->setNrGainsFilteringIterations(2);
-            bcompensator->setBlockSize(32, 32);
-        }
-
+//        if (dynamic_cast<BlocksGainCompensator*>(all_param.compensator.get()))
+//        {
+//            BlocksGainCompensator* bcompensator = dynamic_cast<BlocksGainCompensator*>(all_param.compensator.get());
+//            bcompensator->setNrFeeds(1);
+//            bcompensator->setNrGainsFilteringIterations(2);
+//            bcompensator->setBlockSize(32, 32);
+//        }
+//        Ptr<ExposureCompensator> compensator = ExposureCompensator::createDefault(ExposureCompensator::GAIN_BLOCKS);
         all_param.compensator->feed(corners, images_warped, masks_warped);
 
         // 找接缝
@@ -595,7 +601,7 @@ store_each generate_result(store_each all_param, int index){
             }
 
             if (abs(all_param.compose_scale - 1) > 1e-1)
-                resize(full_img, img, Size(), all_param.compose_scale, all_param.compose_scale, INTER_LINEAR_EXACT);
+                resize(full_img, img, Size(), all_param.compose_scale, all_param.compose_scale);
             else
                 img = full_img;
 
@@ -615,14 +621,14 @@ store_each generate_result(store_each all_param, int index){
             warper->warp(mask, K, all_param.cameras[img_idx].R, INTER_NEAREST, BORDER_CONSTANT, mask_warped);
 
             all_param.compensator->apply(img_idx, corners[img_idx], img_warped, mask_warped);
-            img_warped.convertTo(img_warped_s, CV_16S);
+            img_warped.convertTo(img_warped_s, CV_16SC3);
             img_warped.release();
             img.release();
             mask.release();
 
 
             dilate(masks_warped[img_idx], dilated_mask, Mat());
-            resize(dilated_mask, seam_mask, mask_warped.size(), 0, 0, INTER_LINEAR_EXACT);
+            resize(dilated_mask, seam_mask, mask_warped.size(), 0, 0);
             mask_warped = seam_mask & mask_warped;
 
             if (!blender)
@@ -655,7 +661,7 @@ store_each generate_result(store_each all_param, int index){
         blender->blend(result, result_mask);
 //        imwrite("/home/baihao/Stitch/try_new/resultabc.jpg", result);
     //    imwrite("/home/baihao/Stitch/try_new/result_mask.jpg", result_mask);
-
+        imwrite("/AI/panoimg/result/resultabc.jpg", result);
         all_param.result_stitched_img = result;
         all_param.result_stitched_img_mask = result;
         all_param.status = 0;

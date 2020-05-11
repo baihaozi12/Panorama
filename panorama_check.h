@@ -56,7 +56,7 @@ struct store_each{
     bool is_work_scale_set = false;
     bool is_seam_scale_set = false;
     bool is_compose_scale_set = false;
-    Ptr<Feature2D> finder =  cv::xfeatures2d::SiftFeatureDetector::create();
+
     vector<Mat> full_imgs;
 //    vector<string> img_names;
     vector<Size> full_img_sizes;

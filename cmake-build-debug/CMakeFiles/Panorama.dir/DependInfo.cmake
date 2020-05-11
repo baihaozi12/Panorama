@@ -4,14 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/main.cpp" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug/CMakeFiles/Panorama.dir/main.cpp.o"
-  "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/panorama_check.cpp" "/mnt/c/Users/Hao Bai/workspace/newPano/Panorama/cmake-build-debug/CMakeFiles/Panorama.dir/panorama_check.cpp.o"
+  "/tmp/tmp.91hCFIkHSO/main.cpp" "/tmp/tmp.91hCFIkHSO/cmake-build-debug/CMakeFiles/Panorama.dir/main.cpp.o"
+  "/tmp/tmp.91hCFIkHSO/panorama_check.cpp" "/tmp/tmp.91hCFIkHSO/cmake-build-debug/CMakeFiles/Panorama.dir/panorama_check.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include/opencv4"
+  "/usr/local/include"
+  "/usr/local/include/opencv"
   )
 
 # Targets to which this target links.
