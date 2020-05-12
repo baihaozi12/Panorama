@@ -105,4 +105,6 @@ int generatePanoResult(store_each *all_param, int index);
 
 store_each enmty_struct(store_each all_param);
 
-store_each roll_back(store_each all_param);
+int roll_back(store_each *all_param);
+
+int free_it(store_each *all_param);

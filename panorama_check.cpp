@@ -443,18 +443,28 @@ store_each enmty_struct(store_each all_param){
 
 }
 
-store_each roll_back(store_each all_param) {
-    all_param.cameras.pop_back();
-    all_param.focals.pop_back();
-    all_param.pairwise_matches.pop_back();
-    all_param.features.pop_back();
-    all_param.resized_imgs.pop_back();
-    all_param.full_imgs.pop_back();
-    all_param.full_img_sizes.pop_back();
-    return all_param;
+int roll_back(store_each *all_param) {
+    store_each temop_all_param(*all_param);
+    try{
+        temop_all_param.cameras.pop_back();
+        temop_all_param.focals.pop_back();
+        temop_all_param.pairwise_matches.pop_back();
+        temop_all_param.features.pop_back();
+        temop_all_param.resized_imgs.pop_back();
+        temop_all_param.full_imgs.pop_back();
+        temop_all_param.full_img_sizes.pop_back();
+    } catch (Exception e1) {
+        return 1;
+    }
+    *all_param = temop_all_param;
+
+    return 0;
 }
 
-store_each return_param(store_each all_param) {
-
-
+//store_each return_param(store_each all_param) {
+//
+//
+//}
+int free_it(store_each *all_param){
+    delete all_param;
 }

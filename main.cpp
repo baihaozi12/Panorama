@@ -25,13 +25,12 @@ int main()
     if (pre_frame.empty()){
         return -2;
     }
-    cout << pre_frame.cols;
-    return 1;
+
     vector<string> image_names_temp;
     store_each *all_param = new store_each();
 
     all_param->full_imgs.push_back(pre_frame);
-//    *all_param = generate_result(*all_param, 0);
+    generate_result(*all_param, 0);
     for (int i = 1; i < num_images; ++i)
     {
 //        store_each temop_all_param = *all_param;
@@ -51,11 +50,12 @@ int main()
 //
     }
     imwrite("/AI/panoimg/result/6.jpg", all_param->result_stitched_img);
-    cout<<all_param->result_stitched_img.cols;
+//    cout<<all_param->result_stitched_img.cols;
 //    all_param.;
-    char* core_data =  0;
-
-    delete all_param;
+    roll_back(all_param);
+    cout<<all_param->full_imgs.size();
+    free_it(all_param);
+//    delete all_param;
 
     return 0;
 }
