@@ -6,7 +6,7 @@
 #include <android/log.h>
 
 extern "C"{
-JNIEXPORT jbyteArray JNICALL
+JNIEXPORT jintArray JNICALL
 Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv *,
                                                                          jobject,
                                                                          jobject,

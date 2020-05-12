@@ -100,4 +100,9 @@ int estimate_homo(vector<featuredata_pano> featuredata_pano_list, vector<ImageFe
 
 void i_matcher(vector<ImageFeatures> &features, vector<MatchesInfo> &pairwise_matches);
 
-store_each generate_result(store_each all_param, int index);
+int generate_result(store_each &all_param, int index);
+int generatePanoResult(store_each *all_param, int index);
+
+store_each enmty_struct(store_each all_param);
+
+store_each roll_back(store_each all_param);

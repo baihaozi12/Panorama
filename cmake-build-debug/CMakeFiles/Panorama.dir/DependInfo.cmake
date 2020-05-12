@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/tmp.91hCFIkHSO/main.cpp" "/tmp/tmp.91hCFIkHSO/cmake-build-debug/CMakeFiles/Panorama.dir/main.cpp.o"
-  "/tmp/tmp.91hCFIkHSO/panorama_check.cpp" "/tmp/tmp.91hCFIkHSO/cmake-build-debug/CMakeFiles/Panorama.dir/panorama_check.cpp.o"
+  "/tmp/tmp.KgjRnSGC6h/main.cpp" "/tmp/tmp.KgjRnSGC6h/cmake-build-debug/CMakeFiles/Panorama.dir/main.cpp.o"
+  "/tmp/tmp.KgjRnSGC6h/panorama_check.cpp" "/tmp/tmp.KgjRnSGC6h/cmake-build-debug/CMakeFiles/Panorama.dir/panorama_check.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
