@@ -8,7 +8,7 @@ store_each *all_param = new store_each();
 // store_each all_param_result;
 extern "C" {
 jintArray matToBitmapArray(JNIEnv *env, const cv::Mat &image) {
-    jintArray resultImage = env->NewIntArray(image.total());
+    jintArray resultImage = env->NewIntArray(image.total()+2);
     jint *_data = new jint[image.total()+2];
     for (int i = 0; i < image.total(); i++) {
         char r = image.data[3 * i + 2];

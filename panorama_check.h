@@ -20,6 +20,7 @@
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/stitching/detail/autocalib.hpp"
+//#include "opencv2/core/o"
 //#include <>
 //#include <boost/thread.hpp>
 #ifndef PANORAMA_PANORAMA_CHECK_H
