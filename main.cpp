@@ -33,8 +33,12 @@ int main()
     *all_param = generate_result(*all_param, 0);
     for (int i = 1; i < num_images; ++i)
     {
+//        store_each temop_all_param = *all_param;
+        store_each temop_all_param(*all_param);
+
         Mat pre_frame = imread(img_names[i]);
         all_param->full_imgs.push_back(pre_frame);
+
 
 //        boost::thread api_caller(::generate_result(all_param, i) );
 //
