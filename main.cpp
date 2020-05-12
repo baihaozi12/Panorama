@@ -25,12 +25,13 @@ int main()
     if (pre_frame.empty()){
         return -2;
     }
-
+    cout << pre_frame.cols;
+    return 1;
     vector<string> image_names_temp;
     store_each *all_param = new store_each();
 
     all_param->full_imgs.push_back(pre_frame);
-    *all_param = generate_result(*all_param, 0);
+//    *all_param = generate_result(*all_param, 0);
     for (int i = 1; i < num_images; ++i)
     {
 //        store_each temop_all_param = *all_param;

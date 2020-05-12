@@ -9,7 +9,7 @@ store_each *all_param = new store_each();
 extern "C" {
 jintArray matToBitmapArray(JNIEnv *env, const cv::Mat &image) {
     jintArray resultImage = env->NewIntArray(image.total());
-    jint *_data = new jint[image.total()];
+    jint *_data = new jint[image.total()+2];
     for (int i = 0; i < image.total(); i++) {
         char r = image.data[3 * i + 2];
         char g = image.data[3 * i + 1];
@@ -18,7 +18,9 @@ jintArray matToBitmapArray(JNIEnv *env, const cv::Mat &image) {
         _data[i] = (((jint) a << 24) & 0xFF000000) + (((jint) r << 16) & 0x00FF0000) +
                    (((jint) g << 8) & 0x0000FF00) + ((jint) b & 0x000000FF);
     }
-    env->SetIntArrayRegion(resultImage, 0, image.total(), _data);
+    _data[-1] = image.rows;
+    _data[-2] = image.cols;
+    env->SetIntArrayRegion(resultImage, 0, image.total()+2, _data);
     delete[]_data;
 
     return resultImage;
@@ -37,27 +39,28 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
         jlong getimage = (env)->CallLongMethod(image, getNativeObjAddr, NULL);
         Mat myimage = Mat();
         myimage = *(Mat *) getimage;
-        jintArray result = matToBitmapArray(env, myimage);
-        return result;
-//        if (myimage.empty()) {
-//            jbyteArray errorArray = env->NewByteArray(1);
-//            return errorArray;
-//        }
-//        store_each temop_all_param(*all_param);
-//        all_param->full_imgs.push_back(myimage);
-//        generate_result(*all_param, image_num);
-//        myimage.release();
+//        jintArray result = matToBitmapArray(env, myimage);
+//        return result;
+        if (myimage.empty()) {
+            jbyteArray errorArray = env->NewByteArray(1);
+            return errorArray;
+        }
+        store_each temop_all_param(*all_param);
+        all_param->full_imgs.push_back(myimage);
+        generate_result(*all_param, image_num);
+        myimage.release();
 
-//// if status is 1 error re run
-//        if (all_param->status == 1) {
-//            *all_param = temop_all_param;
-//            jbyteArray errorArray = env->NewByteArray(1);
-//
-//            return errorArray;
-//        } else if (all_param->status == 0) {
-//            jbyteArray result = matToByteArray(env, all_param->result_stitched_img);
-//            return result;
-//        }
+// if status is 1 error re run
+        if (all_param->status == 1) {
+            *all_param = temop_all_param;
+            jintArray errorArray = env->NewIntArray(1);
+
+            return errorArray;
+        } else if (all_param->status == 0) {
+            jintArray result = matToBitmapArray(env, all_param->result_stitched_img);
+
+            return result;
+        }
 
     } catch (...) {
         jintArray errorArray = env->NewIntArray(1);
