@@ -49,7 +49,10 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
         all_param->full_imgs.push_back(myimage);
         generate_result(*all_param, image_num);
         myimage.release();
-
+        if (image_num == 0) {
+            jintArray zeroArray = env->NewIntArray(1);
+            return zeroArray;
+        }
 // if status is 1 error re run
         if (all_param->status == 1) {
             *all_param = temop_all_param;
