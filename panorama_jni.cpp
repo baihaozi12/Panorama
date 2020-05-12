@@ -4,7 +4,7 @@
 
 #include "panorama_jni.h"
 
-store_each all_param = new store_each();
+store_each all_param ;
 extern "C" {
 JNIEXPORT jboolean JNICALL
 Java_com_data100_taskmobile_ui_main_activity_MainActivity_Pano(JNIEnv * env ,
