@@ -27,69 +27,30 @@ int main()
     }
 
     vector<string> image_names_temp;
-    store_each all_param;
+    store_each *all_param = new store_each();
 
-    all_param.full_imgs.push_back(pre_frame);
-    all_param = generate_result(all_param, 0);
+    all_param->full_imgs.push_back(pre_frame);
+    *all_param = generate_result(*all_param, 0);
     for (int i = 1; i < num_images; ++i)
     {
         Mat pre_frame = imread(img_names[i]);
-        all_param.full_imgs.push_back(pre_frame);
+        all_param->full_imgs.push_back(pre_frame);
 
 //        boost::thread api_caller(::generate_result(all_param, i) );
 //
 //        if(api_caller.timed_join(boost::posix_time::milliseconds(500))){
-        all_param = generate_result(all_param, i);
+        *all_param = generate_result(*all_param, i);
 //        }else{
 //
 //        }
 //
     }
-    imwrite("/AI/panoimg/result/6.jpg", all_param.result_stitched_img);
-    cout<<all_param.result_stitched_img.cols;
+    imwrite("/AI/panoimg/result/6.jpg", all_param->result_stitched_img);
+    cout<<all_param->result_stitched_img.cols;
 //    all_param.;
     char* core_data =  0;
 
+    delete all_param;
+
     return 0;
 }
-//void init_core_data(){
-//    store_each all_param;
-//    // 初始化 core_data
-//}
-
-//int main()
-//{
-//    int num_images = static_cast<int>(img_names.size());
-//
-//
-//
-//    Mat pre_frame = imread(img_names[0]);
-//    if (pre_frame.empty()){
-//        return -2;
-//    }
-//
-//    vector<string> image_names_temp;
-//    store_each *all_param =(store_each *)(malloc(100000 * sizeof(store_each)));
-//    all_param->full_imgs.push_back(pre_frame);
-//    generate_result(*all_param, 0);
-//    for (int i = 1; i < num_images; ++i)
-//    {
-//        Mat pre_frame = imread(img_names[i]);
-//        all_param->full_imgs.push_back(pre_frame);
-//
-////        boost::thread api_caller(::generate_result(all_param, i) );
-////
-////        if(api_caller.timed_join(boost::posix_time::milliseconds(500))){
-//        generate_result(*all_param, i);
-////        }else{
-////
-////        }
-////
-//    }
-//    imwrite("/AI/panoimg/result/6.jpg", all_param->result_stitched_img);
-//    cout<<all_param->result_stitched_img.cols;
-////    all_param.;
-//    char* core_data =  0;
-//
-//    return 0;
-//}

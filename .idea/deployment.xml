@@ -2,41 +2,28 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="WSL (3204745a-1b38-4b90-8127-056ef93e6972)">
     <serverData>
-      <paths name="152ppz (cb1b2078-8be7-47c3-b60e-cdeed5121726)">
+      <paths name="152 (9a60e41a-87a1-4af7-b1be-cfb4e215ef10)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.91hCFIkHSO" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.KgjRnSGC6h" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>
       </paths>
-      <paths name="Remote Host (00e0a689-2061-4bd1-8586-fa9011f0b062)">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/tmp/tmp.0oOWc63ZRw" local="$PROJECT_DIR$" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="WSL (3204745a-1b38-4b90-8127-056ef93e6972)">
+      <paths name="Remote Host (05a56508-bd70-4c60-994a-ee9338ca3006)">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="树莓派 (8738d637-3745-4886-a234-2153886bbba2)">
+      <paths name="WSL (0415ae48-484b-4670-a46d-71b1800c0cf0)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.6DIoVaf0ta" local="$PROJECT_DIR$" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
