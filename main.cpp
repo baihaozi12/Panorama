@@ -43,7 +43,7 @@ int main()
 //        boost::thread api_caller(::generate_result(all_param, i) );
 //
 //        if(api_caller.timed_join(boost::posix_time::milliseconds(500))){
-        *all_param = generate_result(*all_param, i);
+        generate_result(*all_param, i);
 //        }else{
 //
 //        }

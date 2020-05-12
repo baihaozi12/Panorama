@@ -59,12 +59,12 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
         generateResult(*all_param, image_num);
         myimage.release();
 // if status is 1 error re run
-        if (all_param->status == 0) {
+        if (all_param->status == 1) {
             *all_param = temop_all_param;
             jbyteArray errorArray = env->NewByteArray(1);
 
             return errorArray;
-        } else if (all_param_result.status == 1) {
+        } else if (all_param_result.status == 0) {
             jbyteArray result = matToByteArray(env, all_param->result_stitched_img);
             return result;
         }

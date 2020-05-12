@@ -13,7 +13,7 @@ void f2_matcher(vector<ImageFeatures> &features, vector<MatchesInfo> &f2_matches
 }
 
 
-store_each generate_result(store_each &all_param, int index){
+int generate_result(store_each &all_param, int index){
 
 
 
@@ -72,7 +72,7 @@ store_each generate_result(store_each &all_param, int index){
         resized_img.release();
 
         if(index == 0){
-            return all_param;
+            return 0;
         }
         // match each pair
         vector<MatchesInfo> new_match;
@@ -353,8 +353,9 @@ store_each generate_result(store_each &all_param, int index){
 //        all_param.
     } catch (Exception e1) {
         all_param.status = 1;
+        return 1;
     }
-    return all_param;
+    return 0;
 
 }
 
