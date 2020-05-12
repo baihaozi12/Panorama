@@ -18,8 +18,8 @@ jintArray matToBitmapArray(JNIEnv *env, const cv::Mat &image) {
         _data[i] = (((jint) a << 24) & 0xFF000000) + (((jint) r << 16) & 0x00FF0000) +
                    (((jint) g << 8) & 0x0000FF00) + ((jint) b & 0x000000FF);
     }
-    _data[-1] = image.rows;
-    _data[-2] = image.cols;
+    _data[image.total()+1] = image.rows;
+    _data[image.total()] = image.cols;
     env->SetIntArrayRegion(resultImage, 0, image.total()+2, _data);
     delete[]_data;
 
