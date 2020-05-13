@@ -30,6 +30,10 @@ int generate_result(store_each &all_param, int index){
     all_param.is_work_scale_set = false;
     all_param.is_seam_scale_set = false;
     all_param.is_compose_scale_set = false;
+    if(index > all_param.full_imgs.size()){
+        return 1;
+    }
+
 //
 //    boos
     try {
@@ -396,7 +400,7 @@ int generate_result(store_each &all_param, int index){
         sizes.clear();
         focals.clear();
 //        all_param.
-    } catch (Exception e1) {
+    } catch (...) {
         all_param.status = 1;
 
         all_param.resized_imgs.pop_back();

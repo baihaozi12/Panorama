@@ -8,38 +8,38 @@
       <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\usr\;CMake Files\..\..\usr\local\;CMake Files\..\..\usr\local\share\;CMake Files\..\..\usr\local\share\OpenCV\;" />
       <Build>
       <Target title="all">
-         <Option working_dir="/tmp/tmp.KgjRnSGC6h/cmake-build-debug" />
+         <Option working_dir="/tmp/tmp.XfExSMOaTP/cmake-build-debug" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 all" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="edit_cache">
-         <Option working_dir="/tmp/tmp.KgjRnSGC6h/cmake-build-debug" />
+         <Option working_dir="/tmp/tmp.XfExSMOaTP/cmake-build-debug" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="rebuild_cache">
-         <Option working_dir="/tmp/tmp.KgjRnSGC6h/cmake-build-debug" />
+         <Option working_dir="/tmp/tmp.XfExSMOaTP/cmake-build-debug" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="Panorama">
-         <Option output="/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Panorama" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/tmp/tmp.KgjRnSGC6h/cmake-build-debug" />
+         <Option output="/tmp/tmp.XfExSMOaTP/cmake-build-debug/Panorama" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/tmp/tmp.XfExSMOaTP/cmake-build-debug" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -55,15 +55,15 @@
             <Add directory="/usr/local/include/opencv" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 Panorama" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 Panorama" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="Panorama/fast">
-         <Option output="/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Panorama" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/tmp/tmp.KgjRnSGC6h/cmake-build-debug" />
+         <Option output="/tmp/tmp.XfExSMOaTP/cmake-build-debug/Panorama" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/tmp/tmp.XfExSMOaTP/cmake-build-debug" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -79,35 +79,35 @@
             <Add directory="/usr/local/include/opencv" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 Panorama/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.KgjRnSGC6h/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 Panorama/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.XfExSMOaTP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       </Build>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/main.cpp">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/main.cpp">
          <Option target="Panorama"/>
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/panorama_check.cpp">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/panorama_check.cpp">
          <Option target="Panorama"/>
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/panorama_check.h">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/panorama_check.h">
          <Option target="Panorama"/>
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/CMakeLists.txt">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
           <Option virtualFolder="CMake Files\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/../../usr/local/share/OpenCV/OpenCVConfig.cmake">
           <Option virtualFolder="CMake Files\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/../../usr/local/share/OpenCV/OpenCVModules.cmake">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/../../usr/local/share/OpenCV/OpenCVModules.cmake">
           <Option virtualFolder="CMake Files\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/tmp/tmp.KgjRnSGC6h/../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+      <Unit filename="/tmp/tmp.XfExSMOaTP/../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
           <Option virtualFolder="CMake Files\..\..\usr\local\share\OpenCV\" />
       </Unit>
    </Project>
