@@ -87,12 +87,21 @@ int generate_result(store_each &all_param, int index){
         //! (4) 剔除外点，保留最确信的大成分
         // Leave only images we are sure are from the same panorama
         int features_size = all_param.features.size();
-        vector<int> indices = leaveBiggestComponent(all_param.features, all_param.pairwise_matches, all_param.conf_thresh);
-        if (all_param.features.size() != features_size){
-
-            
+        vector<ImageFeatures> temp_feature = all_param.features;
+        vector<int> indices = leaveBiggestComponent(temp_feature, all_param.pairwise_matches, all_param.conf_thresh);
+        // if leaveBiggestComponent delete the feature roll back
+        if (temp_feature.size() != features_size){
+            temp_feature.clear();
+            all_param.resized_imgs.pop_back();
+            all_param.features.pop_back();
+            all_param.full_imgs.pop_back();
+            all_param.full_img_sizes.pop_back();
+            all_param.resized_imgs.pop_back();
+            all_param.status = 1;
             return  1;
         }
+        all_param.features = temp_feature;
+        temp_feature.clear();
         vector<Mat> img_subset;
     //    vector<String> img_names_subset;
         vector<Size> full_img_sizes_subset;
@@ -118,7 +127,14 @@ int generate_result(store_each &all_param, int index){
         if (num_images < 2)
         {
             // 及时报错
-            throw   "Need more images\n";
+            temp_feature.clear();
+            all_param.resized_imgs.pop_back();
+            all_param.features.pop_back();
+            all_param.full_imgs.pop_back();
+            all_param.full_img_sizes.pop_back();
+            all_param.resized_imgs.pop_back();
+            all_param.status = 1;
+            return  1;
     //        Exception;
         }
 
@@ -126,8 +142,14 @@ int generate_result(store_each &all_param, int index){
         int a = all_param.features.size();
         if (!(*all_param.estimator)(all_param.features, all_param.pairwise_matches, all_param.cameras))
         {
-            throw   "Homography estimation failed.\n";
-    //        return -1;
+            temp_feature.clear();
+            all_param.resized_imgs.pop_back();
+            all_param.features.pop_back();
+            all_param.full_imgs.pop_back();
+            all_param.full_img_sizes.pop_back();
+            all_param.resized_imgs.pop_back();
+            all_param.status = 1;
+            return  1;
         }
 
         for (size_t i = 0; i < all_param.cameras.size(); ++i)
@@ -148,7 +170,14 @@ int generate_result(store_each &all_param, int index){
 
         if (!(*all_param.adjuster)(all_param.features, all_param.pairwise_matches, all_param.cameras))
         {
-            throw  "Camera parameters adjusting failed.\n";
+            temp_feature.clear();
+            all_param.resized_imgs.pop_back();
+            all_param.features.pop_back();
+            all_param.full_imgs.pop_back();
+            all_param.full_img_sizes.pop_back();
+            all_param.resized_imgs.pop_back();
+            all_param.status = 1;
+            return  1;
         }
 
         // Find median focal length
@@ -184,7 +213,14 @@ int generate_result(store_each &all_param, int index){
 
         if (!all_param.warper_creator)
         {
-            throw  "Can't create the warper \n";
+
+            all_param.resized_imgs.pop_back();
+            all_param.features.pop_back();
+            all_param.full_imgs.pop_back();
+            all_param.full_img_sizes.pop_back();
+            all_param.resized_imgs.pop_back();
+            all_param.status = 1;
+            return  1;
     //        return 1;
         }
         //! Create RotationWarper
@@ -361,6 +397,13 @@ int generate_result(store_each &all_param, int index){
         focals.clear();
 //        all_param.
     } catch (Exception e1) {
+        all_param.status = 1;
+
+        all_param.resized_imgs.pop_back();
+        all_param.features.pop_back();
+        all_param.full_imgs.pop_back();
+        all_param.full_img_sizes.pop_back();
+        all_param.resized_imgs.pop_back();
         all_param.status = 1;
         return 1;
     }
