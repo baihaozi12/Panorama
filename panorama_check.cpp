@@ -332,6 +332,10 @@ int generate_result(store_each &all_param, int index){
 //        imwrite("/AI/panoimg/result/resultabc.jpg", result);
         all_param.result_stitched_img = result;
         all_param.result_stitched_img_mask = result;
+
+        all_param.result_stitched_img.convertTo(all_param.result_stitched_img,CV_8U);
+        cv::cvtColor(all_param.result_stitched_img, all_param.result_stitched_img, CV_BGRA2BGR);
+
         all_param.status = 0;
 
         // 清内存

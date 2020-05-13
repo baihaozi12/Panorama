@@ -10,7 +10,7 @@ using namespace std;
 //                            "/home/nolan/Images/4.jpg", "/home/nolan/Images/5.jpg"};
 
 //vector<String> img_names = {"/home/baihao/Stitch/try_new/1.jpeg", "/home/baihao/Stitch/try_new/2.jpeg", "/home/baihao/Stitch/try_new/3.jpeg"};
-vector<String> img_names = {"/AI/panoimg/1111111/3.jpg", "/AI/panoimg/1111111/4.jpg"};
+vector<String> img_names = {"/AI/panoimg/1111111/mobileJPG/1.jpg", "/AI/panoimg/1111111/mobileJPG/2.jpg"};
 //vector<String> img_names = {"/home/nolan/Images/c1.jpg", "/home/nolan/Images/c2.jpg", "/home/nolan/Images/c3.jpg",
 //                            "/home/nolan/Images/c4.jpg"};
 
@@ -49,6 +49,9 @@ int main()
 //        }
 //
     }
+//    cout<<"aaaaaaaaaaa";
+//    all_param->result_stitched_img.convertTo(all_param->result_stitched_img,CV_8U);
+//    cv::cvtColor(all_param->result_stitched_img, all_param->result_stitched_img, CV_BGRA2BGR);
     imwrite("/AI/panoimg/result/6.jpg", all_param->result_stitched_img);
 //    cout<<all_param->result_stitched_img.cols;
 //    all_param.;

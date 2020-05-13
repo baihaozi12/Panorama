@@ -42,7 +42,7 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
 //        jintArray result = matToBitmapArray(env, myimage);
 //        return result;
         if (myimage.empty()) {
-            jbyteArray errorArray = env->NewByteArray(1);
+            jintArray errorArray = env->NewIntArray(1);
             return errorArray;
         }
         store_each temop_all_param(*all_param);
