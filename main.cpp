@@ -10,7 +10,7 @@ using namespace std;
 //                            "/home/nolan/Images/4.jpg", "/home/nolan/Images/5.jpg"};
 
 //vector<String> img_names = {"/home/baihao/Stitch/try_new/1.jpeg", "/home/baihao/Stitch/try_new/2.jpeg", "/home/baihao/Stitch/try_new/3.jpeg"};
-vector<String> img_names = {"/AI/panoimg/1111111/mobileJPG/1.jpg", "/AI/panoimg/1111111/mobileJPG/2.jpg"};
+vector<String> img_names = {"/AI/panoimg/1111111/2.jpg", "/AI/panoimg/1111111/3.jpg"};
 //vector<String> img_names = {"/home/nolan/Images/c1.jpg", "/home/nolan/Images/c2.jpg", "/home/nolan/Images/c3.jpg",
 //                            "/home/nolan/Images/c4.jpg"};
 
@@ -43,7 +43,10 @@ int main()
 //        boost::thread api_caller(::generate_result(all_param, i) );
 //
 //        if(api_caller.timed_join(boost::posix_time::milliseconds(500))){
-        generate_result(*all_param, i);
+        int a = generate_result(*all_param, i);
+        if(a == 1){
+            return 1;
+        }
 //        }else{
 //
 //        }
@@ -55,9 +58,9 @@ int main()
     imwrite("/AI/panoimg/result/6.jpg", all_param->result_stitched_img);
 //    cout<<all_param->result_stitched_img.cols;
 //    all_param.;
-    roll_back(all_param);
-    cout<<all_param->full_imgs.size();
-    free_it(all_param);
+//    roll_back(all_param);
+//    cout<<all_param->full_imgs.size();
+//    free_it(all_param);
 //    delete all_param;
 
     return 0;

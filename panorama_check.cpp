@@ -86,8 +86,13 @@ int generate_result(store_each &all_param, int index){
         i_matcher(all_param.features, all_param.pairwise_matches);
         //! (4) 剔除外点，保留最确信的大成分
         // Leave only images we are sure are from the same panorama
+        int features_size = all_param.features.size();
         vector<int> indices = leaveBiggestComponent(all_param.features, all_param.pairwise_matches, all_param.conf_thresh);
+        if (all_param.features.size() != features_size){
 
+            
+            return  1;
+        }
         vector<Mat> img_subset;
     //    vector<String> img_names_subset;
         vector<Size> full_img_sizes_subset;
@@ -118,7 +123,7 @@ int generate_result(store_each &all_param, int index){
         }
 
         //!(5) 估计 homography
-
+        int a = all_param.features.size();
         if (!(*all_param.estimator)(all_param.features, all_param.pairwise_matches, all_param.cameras))
         {
             throw   "Homography estimation failed.\n";
