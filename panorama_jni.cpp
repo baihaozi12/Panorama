@@ -5,11 +5,10 @@
 #include "panorama_jni.h"
 
 store_each *all_param = new store_each();
-// store_each all_param_result;
 extern "C" {
 jintArray matToBitmapArray(JNIEnv *env, const cv::Mat &image) {
-    jintArray resultImage = env->NewIntArray(image.total()+2);
-    jint *_data = new jint[image.total()+2];
+    jintArray resultImage = env->NewIntArray(image.total() + 2);
+    jint *_data = new jint[image.total() + 2];
     for (int i = 0; i < image.total(); i++) {
         char r = image.data[3 * i + 2];
         char g = image.data[3 * i + 1];
@@ -18,18 +17,17 @@ jintArray matToBitmapArray(JNIEnv *env, const cv::Mat &image) {
         _data[i] = (((jint) a << 24) & 0xFF000000) + (((jint) r << 16) & 0x00FF0000) +
                    (((jint) g << 8) & 0x0000FF00) + ((jint) b & 0x000000FF);
     }
-    _data[image.total()+1] = image.rows;
+    _data[image.total() + 1] = image.rows;
     _data[image.total()] = image.cols;
-    env->SetIntArrayRegion(resultImage, 0, image.total()+2, _data);
+    env->SetIntArrayRegion(resultImage, 0, image.total() + 2, _data);
     delete[]_data;
 
     return resultImage;
 }
 
 
-
 JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv *env,
+Java_com_trax_jcall_AlgorithmNativeCarrier_generateResult(JNIEnv *env,
                                                                          jobject obj,
                                                                          jobject image,
                                                                          jint image_num) {
@@ -39,8 +37,6 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
         jlong getimage = (env)->CallLongMethod(image, getNativeObjAddr, NULL);
         Mat myimage = Mat();
         myimage = *(Mat *) getimage;
-//        jintArray result = matToBitmapArray(env, myimage);
-//        return result;
         if (myimage.empty()) {
             jintArray errorArray = env->NewIntArray(1);
             return errorArray;
@@ -53,7 +49,7 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
             jintArray zeroArray = env->NewIntArray(1);
             return zeroArray;
         }
-// if status is 1 error re run
+        // if status is 1 error re run
         if (all_param->status == 1) {
             *all_param = temop_all_param;
             jintArray errorArray = env->NewIntArray(1);
@@ -73,40 +69,27 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
 }
 
 
-JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_Reset(JNIEnv *,
-                                                                jobject){
+JNIEXPORT jint JNICALL
+Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *) {
     try {
         reset_it(*all_param);
         return 0;
-    }catch(...){
+    } catch (...) {
         return 1;
     }
 
 }
 
 
-JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_RollBack(JNIEnv *,
-                                                                   jobject){
+JNIEXPORT jint JNICALL
+Java_com_trax_jcall_AlgorithmNativeCarrier_rollBack(JNIEnv *) {
     try {
         roll_back(*all_param);
         return 0;
-    }catch(...){
+    } catch (...) {
         return 1;
     }
 }
-
-//JNIEXPORT jintArray JNICALL
-//Java_com_data100_taskmobile_ui_main_activity_MainActivity_DeleteAndFree(JNIEnv *,
-//                                                                        jobject){
-//    try {
-//        free_it(all_param);
-//        return 0;
-//    }catch(...){
-//        return 1;
-//    }
-//}
 
 
 }

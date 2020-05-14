@@ -7,22 +7,17 @@
 
 extern "C"{
 JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv *,
+Java_com_trax_jcall_AlgorithmNativeCarrier_generateResult(JNIEnv *,
                                                                          jobject,
                                                                          jobject,
                                                                          jint);
 
-JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_Reset(JNIEnv *,
-                                                                jobject);
+JNIEXPORT jint JNICALL
+Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *);
 
-JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_RollBack(JNIEnv *,
-                                                                jobject);
+JNIEXPORT jint JNICALL
+Java_com_trax_jcall_AlgorithmNativeCarrier_rollBack(JNIEnv *);
 
-//JNIEXPORT jintArray JNICALL
-//Java_com_data100_taskmobile_ui_main_activity_MainActivity_DeleteAndFree(JNIEnv *,
-//                                                                   jobject);
 
 }
 #ifndef PANORAMA_PANORAMA_JNI_H
