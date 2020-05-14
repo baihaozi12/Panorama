@@ -89,6 +89,12 @@
       <Unit filename="/tmp/tmp.XfExSMOaTP/main.cpp">
          <Option target="Panorama"/>
       </Unit>
+      <Unit filename="/tmp/tmp.XfExSMOaTP/original_pano.cpp">
+         <Option target="Panorama"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.XfExSMOaTP/original_pano.h">
+         <Option target="Panorama"/>
+      </Unit>
       <Unit filename="/tmp/tmp.XfExSMOaTP/panorama_check.cpp">
          <Option target="Panorama"/>
       </Unit>

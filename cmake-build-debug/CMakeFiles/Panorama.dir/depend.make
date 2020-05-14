@@ -138,6 +138,9 @@ CMakeFiles/Panorama.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
 CMakeFiles/Panorama.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 CMakeFiles/Panorama.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 
+CMakeFiles/Panorama.dir/original_pano.cpp.o: ../original_pano.cpp
+CMakeFiles/Panorama.dir/original_pano.cpp.o: ../original_pano.h
+
 CMakeFiles/Panorama.dir/panorama_check.cpp.o: ../panorama_check.cpp
 CMakeFiles/Panorama.dir/panorama_check.cpp.o: ../panorama_check.h
 CMakeFiles/Panorama.dir/panorama_check.cpp.o: /usr/local/include/opencv/cxcore.h

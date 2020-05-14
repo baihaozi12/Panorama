@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Panorama.dir/main.cpp.o"
   "CMakeFiles/Panorama.dir/panorama_check.cpp.o"
+  "CMakeFiles/Panorama.dir/original_pano.cpp.o"
   "Panorama.pdb"
   "Panorama"
 )

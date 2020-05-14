@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+original_pano.o: original_pano.cpp.o
+
+.PHONY : original_pano.o
+
+# target to build an object file
+original_pano.cpp.o:
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/original_pano.cpp.o
+.PHONY : original_pano.cpp.o
+
+original_pano.i: original_pano.cpp.i
+
+.PHONY : original_pano.i
+
+# target to preprocess a source file
+original_pano.cpp.i:
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/original_pano.cpp.i
+.PHONY : original_pano.cpp.i
+
+original_pano.s: original_pano.cpp.s
+
+.PHONY : original_pano.s
+
+# target to generate assembly for a file
+original_pano.cpp.s:
+	$(MAKE) -f CMakeFiles/Panorama.dir/build.make CMakeFiles/Panorama.dir/original_pano.cpp.s
+.PHONY : original_pano.cpp.s
+
 panorama_check.o: panorama_check.cpp.o
 
 .PHONY : panorama_check.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... original_pano.o"
+	@echo "... original_pano.i"
+	@echo "... original_pano.s"
 	@echo "... panorama_check.o"
 	@echo "... panorama_check.i"
 	@echo "... panorama_check.s"

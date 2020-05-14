@@ -138,6 +138,9 @@ CMakeFiles/Panorama.dir/main.cpp.o
  /usr/local/include/opencv2/xfeatures2d.hpp
  /usr/local/include/opencv2/xfeatures2d/cuda.hpp
  /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
+CMakeFiles/Panorama.dir/original_pano.cpp.o
+ /tmp/tmp.XfExSMOaTP/original_pano.cpp
+ /tmp/tmp.XfExSMOaTP/original_pano.h
 CMakeFiles/Panorama.dir/panorama_check.cpp.o
  /tmp/tmp.XfExSMOaTP/panorama_check.cpp
  /tmp/tmp.XfExSMOaTP/panorama_check.h

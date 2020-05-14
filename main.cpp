@@ -32,7 +32,8 @@ int main()
     all_param->full_imgs.push_back(pre_frame);
     generate_result(*all_param, 0);
 
-
+    all_param->full_imgs.push_back(pre_frame);
+    generate_result(*all_param, 2);
     reset_it(*all_param);
     all_param->full_imgs.push_back(pre_frame);
     generate_result(*all_param, 0);
