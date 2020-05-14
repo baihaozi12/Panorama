@@ -10,7 +10,7 @@ using namespace std;
 //                            "/home/nolan/Images/4.jpg", "/home/nolan/Images/5.jpg"};
 
 //vector<String> img_names = {"/home/baihao/Stitch/try_new/1.jpeg", "/home/baihao/Stitch/try_new/2.jpeg", "/home/baihao/Stitch/try_new/3.jpeg"};
-vector<String> img_names = {"/AI/panoimg/1111111/2.jpg", "/AI/panoimg/1111111/3.jpg"};
+vector<String> img_names = {"/AI/panoimg/1111111/1.jpg", "/AI/panoimg/1111111/2.jpg"};
 //vector<String> img_names = {"/home/nolan/Images/c1.jpg", "/home/nolan/Images/c2.jpg", "/home/nolan/Images/c3.jpg",
 //                            "/home/nolan/Images/c4.jpg"};
 
@@ -29,6 +29,11 @@ int main()
     vector<string> image_names_temp;
     store_each *all_param = new store_each();
 
+    all_param->full_imgs.push_back(pre_frame);
+    generate_result(*all_param, 0);
+
+
+    reset_it(*all_param);
     all_param->full_imgs.push_back(pre_frame);
     generate_result(*all_param, 0);
     for (int i = 1; i < num_images; ++i)
@@ -56,12 +61,13 @@ int main()
 //    all_param->result_stitched_img.convertTo(all_param->result_stitched_img,CV_8U);
 //    cv::cvtColor(all_param->result_stitched_img, all_param->result_stitched_img, CV_BGRA2BGR);
     imwrite("/AI/panoimg/result/6.jpg", all_param->result_stitched_img);
-//    cout<<all_param->result_stitched_img.cols;
-//    all_param.;
-//    roll_back(all_param);
-//    cout<<all_param->full_imgs.size();
+    cout<<all_param->result_stitched_img.cols;
+
+    roll_back(*all_param);
+    cout<<all_param->full_imgs.size();
 //    free_it(all_param);
 //    delete all_param;
-
+//    all_param->full_imgs.push_back(pre_frame);
+//    generate_result(*all_param, 0);
     return 0;
 }

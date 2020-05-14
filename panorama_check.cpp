@@ -30,6 +30,7 @@ int generate_result(store_each &all_param, int index){
     all_param.is_work_scale_set = false;
     all_param.is_seam_scale_set = false;
     all_param.is_compose_scale_set = false;
+    // index out of range
     if(index > all_param.full_imgs.size()){
         return 1;
     }
@@ -100,7 +101,7 @@ int generate_result(store_each &all_param, int index){
             all_param.features.pop_back();
             all_param.full_imgs.pop_back();
             all_param.full_img_sizes.pop_back();
-            all_param.resized_imgs.pop_back();
+
             all_param.status = 1;
             return  1;
         }
@@ -136,7 +137,7 @@ int generate_result(store_each &all_param, int index){
             all_param.features.pop_back();
             all_param.full_imgs.pop_back();
             all_param.full_img_sizes.pop_back();
-            all_param.resized_imgs.pop_back();
+
             all_param.status = 1;
             return  1;
     //        Exception;
@@ -151,7 +152,7 @@ int generate_result(store_each &all_param, int index){
             all_param.features.pop_back();
             all_param.full_imgs.pop_back();
             all_param.full_img_sizes.pop_back();
-            all_param.resized_imgs.pop_back();
+
             all_param.status = 1;
             return  1;
         }
@@ -179,7 +180,7 @@ int generate_result(store_each &all_param, int index){
             all_param.features.pop_back();
             all_param.full_imgs.pop_back();
             all_param.full_img_sizes.pop_back();
-            all_param.resized_imgs.pop_back();
+
             all_param.status = 1;
             return  1;
         }
@@ -222,7 +223,7 @@ int generate_result(store_each &all_param, int index){
             all_param.features.pop_back();
             all_param.full_imgs.pop_back();
             all_param.full_img_sizes.pop_back();
-            all_param.resized_imgs.pop_back();
+
             all_param.status = 1;
             return  1;
     //        return 1;
@@ -407,7 +408,7 @@ int generate_result(store_each &all_param, int index){
         all_param.features.pop_back();
         all_param.full_imgs.pop_back();
         all_param.full_img_sizes.pop_back();
-        all_param.resized_imgs.pop_back();
+
         all_param.status = 1;
         return 1;
     }
@@ -499,20 +500,20 @@ store_each enmty_struct(store_each all_param){
 
 }
 
-int roll_back(store_each *all_param) {
-    store_each temop_all_param(*all_param);
+int roll_back(store_each &all_param) {
+//    store_each temop_all_param(all_param);
     try{
-        temop_all_param.cameras.pop_back();
-        temop_all_param.focals.pop_back();
-        temop_all_param.pairwise_matches.pop_back();
-        temop_all_param.features.pop_back();
-        temop_all_param.resized_imgs.pop_back();
-        temop_all_param.full_imgs.pop_back();
-        temop_all_param.full_img_sizes.pop_back();
+//        temop_all_param.cameras.pop_back();
+//        temop_all_param.focals.pop_back();
+//        temop_all_param.pairwise_matches.pop_back();
+        all_param.features.pop_back();
+        all_param.resized_imgs.pop_back();
+        all_param.full_imgs.pop_back();
+        all_param.full_img_sizes.pop_back();
     } catch (Exception e1) {
         return 1;
     }
-    *all_param = temop_all_param;
+//    all_param = temop_all_param;
 
     return 0;
 }
@@ -523,4 +524,17 @@ int roll_back(store_each *all_param) {
 //}
 int free_it(store_each *all_param){
     delete all_param;
+}
+
+
+int reset_it(store_each &all_param){
+    vector<Mat> emptyMat;
+    vector<ImageFeatures> emptyImageFeatures;
+    vector<Size> emptySize;
+    all_param.full_imgs.swap(emptyMat);
+    all_param.resized_imgs.swap(emptyMat);
+    all_param.features.swap(emptyImageFeatures);
+//    all_param.full_imgs.swap(emptyMat);
+    all_param.full_img_sizes.swap(emptySize);
+    return 0;
 }

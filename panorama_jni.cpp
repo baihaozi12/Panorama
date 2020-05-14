@@ -71,4 +71,42 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_generateResult(JNIEnv 
     }
 
 }
+
+
+JNIEXPORT jintArray JNICALL
+Java_com_data100_taskmobile_ui_main_activity_MainActivity_Reset(JNIEnv *,
+                                                                jobject){
+    try {
+        reset_it(*all_param);
+        return 0;
+    }catch(...){
+        return 1;
+    }
+
+}
+
+
+JNIEXPORT jintArray JNICALL
+Java_com_data100_taskmobile_ui_main_activity_MainActivity_RollBack(JNIEnv *,
+                                                                   jobject){
+    try {
+        roll_back(*all_param);
+        return 0;
+    }catch(...){
+        return 1;
+    }
+}
+
+JNIEXPORT jintArray JNICALL
+Java_com_data100_taskmobile_ui_main_activity_MainActivity_DeleteAndFree(JNIEnv *,
+                                                                        jobject){
+    try {
+        free_it(all_param);
+        return 0;
+    }catch(...){
+        return 1;
+    }
+}
+
+
 }
