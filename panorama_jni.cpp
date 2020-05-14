@@ -97,16 +97,16 @@ Java_com_data100_taskmobile_ui_main_activity_MainActivity_RollBack(JNIEnv *,
     }
 }
 
-JNIEXPORT jintArray JNICALL
-Java_com_data100_taskmobile_ui_main_activity_MainActivity_DeleteAndFree(JNIEnv *,
-                                                                        jobject){
-    try {
-        free_it(all_param);
-        return 0;
-    }catch(...){
-        return 1;
-    }
-}
+//JNIEXPORT jintArray JNICALL
+//Java_com_data100_taskmobile_ui_main_activity_MainActivity_DeleteAndFree(JNIEnv *,
+//                                                                        jobject){
+//    try {
+//        free_it(all_param);
+//        return 0;
+//    }catch(...){
+//        return 1;
+//    }
+//}
 
 
 }
