@@ -32,6 +32,7 @@ int generate_result(store_each &all_param, int index){
     all_param.is_compose_scale_set = false;
     // index out of range
     if(index >= all_param.full_imgs.size()){
+        all_param.full_imgs.pop_back();
         return 1;
     }
 
