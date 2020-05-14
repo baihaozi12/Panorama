@@ -35,8 +35,9 @@ int generate_result(store_each &all_param, int index){
 //    bool isOutofRange = bool(int(index) > int(a));
     cout<<index;
     cout<<all_param.full_imgs.size();
-    int a = all_param.full_imgs.size();
+
     if(index >= all_param.full_imgs.size()){
+        all_param.full_imgs.pop_back();
         return 1;
     }
 
