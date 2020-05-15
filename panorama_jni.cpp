@@ -56,13 +56,20 @@ Java_com_trax_jcall_AlgorithmNativeCarrier_generateResult(JNIEnv *env,
 
             return errorArray;
         } else if (all_param->status == 0) {
+            if(all_param->result_stitched_img.total() == 0){
+                jintArray errorArray = env->NewIntArray(1);
+
+                return errorArray;
+            }
             jintArray result = matToBitmapArray(env, all_param->result_stitched_img);
+
+
 
             return result;
         }
 
     } catch (...) {
-        jintArray errorArray = env->NewIntArray(1);
+        jintArray errorArray = env->NewIntArray( );
         return errorArray;
     }
 

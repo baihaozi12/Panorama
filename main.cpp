@@ -5,7 +5,6 @@
 using namespace cv;
 using namespace std;
 
-
 //vector<String> img_names = {"/home/nolan/Images/1.jpg", "/home/nolan/Images/2.jpg", "/home/nolan/Images/3.jpg",
 //                            "/home/nolan/Images/4.jpg", "/home/nolan/Images/5.jpg"};
 

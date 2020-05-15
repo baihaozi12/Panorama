@@ -15,7 +15,7 @@ void f2_matcher(vector<ImageFeatures> &features, vector<MatchesInfo> &f2_matches
 
 int generate_result(store_each &all_param, int index){
 
-
+    all_param.status = 1;
 
     all_param.work_megapix = 0.6;
     all_param.seam_megapix = 0.1;
@@ -32,6 +32,7 @@ int generate_result(store_each &all_param, int index){
     all_param.is_compose_scale_set = false;
 
     if(index >= all_param.full_imgs.size()){
+        all_param.status = 1;
         all_param.full_imgs.pop_back();
         return 1;
     }
