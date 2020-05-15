@@ -77,7 +77,7 @@ Java_com_trax_jcall_AlgorithmNativeCarrier_generateResult(JNIEnv *env,
 
 
 JNIEXPORT jint JNICALL
-Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *) {
+Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *env,jobject obj) {
     try {
         reset_it(*all_param);
         return 0;
@@ -89,7 +89,7 @@ Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *) {
 
 
 JNIEXPORT jint JNICALL
-Java_com_trax_jcall_AlgorithmNativeCarrier_rollBack(JNIEnv *) {
+Java_com_trax_jcall_AlgorithmNativeCarrier_rollBack(JNIEnv *env,jobject obj) {
     try {
         roll_back(*all_param);
         return 0;
