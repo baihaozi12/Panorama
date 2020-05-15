@@ -13,10 +13,10 @@ Java_com_trax_jcall_AlgorithmNativeCarrier_generateResult(JNIEnv *,
                                                                          jint);
 
 JNIEXPORT jint JNICALL
-Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *);
+Java_com_trax_jcall_AlgorithmNativeCarrier_resetStitch(JNIEnv *,jobject);
 
 JNIEXPORT jint JNICALL
-Java_com_trax_jcall_AlgorithmNativeCarrier_rollBack(JNIEnv *);
+Java_com_trax_jcall_AlgorithmNativeCarrier_rollBack(JNIEnv *,jobject);
 
 
 }
